@@ -1,0 +1,44 @@
+.add-container,.added-Container
+{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 12px;
+  margin-bottom: 10px;
+ 
+  justify-content: center;
+}
+
+.add-container
+{
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.added-Container
+{
+  align-items: center;
+  row-gap: 10px;
+  transition: all ease 0.5s;
+}
+
+.addButton
+{
+  background-color:rgb(27, 174, 27);
+  color:white;
+  padding: 5px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, .2);
+}
+
+.delButton
+{
+  background-color:rgb(159, 14, 14);
+  color:white;
+  padding: 5px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, .3);
+}
+
+.inputs
+{
+  padding: 7px;
+}
+
