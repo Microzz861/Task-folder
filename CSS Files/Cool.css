@@ -1,0 +1,37 @@
+/* In css the order of the elements are important. For ex: If visited was before the normal a w/th color, the color would 
+stay the same as when visited. But if the opposite, the color at the start would be the same as the normal a until we visit it.*/
+/* The correct order for a would be the normal a, visited, hover, and then active*/
+/* The focus allows modifications of an element when we use tab (it focuses on elements) or click on the element like an input text*/
+a
+{
+  color: green;
+}
+
+a:visited
+{
+  color:red;
+}
+
+a:is(:hover,:focus)
+{
+ color: aqua;
+ opacity :.8;
+}
+
+a:active
+{
+  color:orange;
+  opacity:.3;
+}
+
+p
+{
+  text-transform: capitalize;
+  text-decoration: dotted;
+  text-align: justify;
+  text-indent: 2em;
+  padding: 25%; /* This adds left, top, bottom, and right spacing*/
+  line-height: 2.0; /* This is the spacing between each line in the P*/
+  letter-spacing: none; /* We can also change the spacing between letters somehow, we can even change word-spacing*/
+  font-style: oblique; /*Oblique is basically stronger Italic*/
+}

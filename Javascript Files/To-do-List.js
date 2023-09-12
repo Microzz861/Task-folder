@@ -67,6 +67,9 @@ function addItem()
   addOnToPage();
 }
 
+document.getElementById('js-Add').addEventListener('click',addOnToPage());
+document.getElementById('js-localAdd').addEventListener('click',getLocalTasks());
+
 function addOnToPage()
 {
   let addHtmlItems = '';
