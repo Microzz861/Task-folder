@@ -12,12 +12,12 @@
 <div class="add-container">
   <input type="text" class="inputPractice1 inputs" placeholder="Todo name"  onkeydown="keyCheck(event);">
     <input type="date" class="js-dateSelect inputs">
-      <button onclick="addItem();" class="addButton"> Add </button>
+      <button class="addButton" id="js-Add"> Add </button>
 </div>
  
 <hr>
 
-<center><h1 style="display:inline-block; margin-right: 30px;"> Current Tasks in Localstorage</h1> <button onclick="getLocalTasks();" class="addButton"> Get Local Storage Tasks </button></center>
+<center><h1 style="display:inline-block; margin-right: 30px;"> Current Tasks in Localstorage</h1> <button id="js-localAdd" class="addButton"> Get Local Storage Tasks </button></center>
 <div class="added-Container"> <p style="font-size: 20px; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-decoration: underline;"> Task Name </p>  <p style="font-size: 20px; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-decoration: underline;"> Task due </p> </div>
 <div class="js-addToPage added-Container" ></div>
 

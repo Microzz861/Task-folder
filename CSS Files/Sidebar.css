@@ -1,0 +1,246 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
+
+nav
+{
+background-color: whitesmoke;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 2px 2px 2px rgba(0,0,0, .1);
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  width: 103px;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  opacity: 1;
+  position: absolute;
+  overflow: hidden;
+  transition: width .5s ease, height .5s ease, background-color .5s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav-Full
+{
+
+  
+  width: 365px;
+  transition: width .5s ease, height .5s ease, background-color .5s ease-in-out;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.height-Resize
+{
+
+  height: 100%;
+  transition: height .5s ease;
+  opacity: 1;
+  z-index: 1000;
+}
+
+
+ul
+{
+  
+  position: relative;
+  left: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.gridCategory
+{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  
+
+}
+
+.first
+{
+  position: relative;
+  margin-top: 10px;
+}
+
+ a .logo{
+  width: 300px;
+  text-decoration: none;
+  margin-top: 0px;
+  
+  
+  
+ }
+
+.logo
+{
+   display: flex;
+   bottom: -650px;
+   position: absolute;
+   left: 5px;
+} 
+
+.logo .name
+{
+
+ font-family: 'Roboto';
+ font-size: 40px;
+ margin-left: 30px; 
+ bottom: -30px;
+ min-width: 240px;
+ height: fit-content;
+ font-weight: bold;
+ color:rgb(75, 141, 134);
+
+}
+
+.logo img
+{
+   
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    left: 0px;
+    
+    
+}
+
+
+:is(.gridCategory:hover,.logo:hover,.bPosition:hover)
+{
+
+  color:rgb(34, 33, 33);
+  opacity: .6;
+  cursor: pointer;
+}
+
+.logo:hover
+{
+ opacity: 1;
+}
+
+li a:active #activate
+{
+  color:rgb(0, 0, 0);
+  opacity: .3;
+}
+ .bPosition:active
+{
+  color:rgb(0, 0, 0);
+  opacity: .3;
+}
+
+body
+{
+
+  background-color: lightblue;
+  
+}
+
+.side-Button-Wrapper
+{
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.bPosition
+{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: none;
+  left: 15px;
+  background-color: none;
+  color:none;
+  background: none;
+}
+
+
+.sideButtonIMG
+{
+  width: 50px;
+  height: 50px; 
+  top: 0px;
+}
+
+
+
+.gridCategory img
+{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 20px;
+}
+
+ .name
+{
+  position: relative;
+  font-family: 'Roboto';
+  font-size: 40px;
+  margin-left: 50px; 
+  color:rgb(75, 141, 134);
+
+  
+}
+
+#js-spanThing
+{
+  width: 300px;
+  cursor: pointer;
+}
+
+
+.gridCategory #fill-icon-task
+{
+  position: relative;
+  left: 10px;
+  width: 70px;
+  height: 50px;
+  background: transparent;
+}
+
+.side-Button-Effect1
+{
+  transition:transform .5s;
+  transform: rotate(180deg);
+}
+.side-Button-Effect2
+{
+  transition:transform .5s;
+  transform: rotate(0deg);
+}
+.js-Color
+{
+  background-color:turquoise;
+}
+
+/*nav .half-wrapper#lol
+{
+  position: absolute;
+  bottom: 0;
+  z-index: ;
+  background-color: rgb(212, 212, 40);
+ 
+}
+.themeZig
+{
+  background-color: rgb(44, 42, 42);
+  color:white;
+}
+.themeZig a:hover div.gridCategory 
+{
+  color:white;
+  opacity: .6;
+}
+*/
+
