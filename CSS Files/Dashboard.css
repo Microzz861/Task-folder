@@ -1,6 +1,8 @@
 
   @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
-/*
+  @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
+
+  /*
 font-family: 'ADLaM Display', cursive;
 font-family: 'Noto Sans Sogdian', sans-serif;
 font-family: 'Roboto', sans-serif;
@@ -9,12 +11,252 @@ font-family: 'Roboto', sans-serif;
 *{
 padding: 0;
 margin: 0;
-font-family: 'Signika', sans-serif;
 }
 
+@media (500px <= width <=1550px ){
+  
+  
+   
+  .contain{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    min-width: 300px;
+    height: 90px;
+    background-color: white;
+    margin: 0 50px;
+    
+    }
+    
+    body{
+      min-width: 300px;
+      height: 100%;
+      overflow: scroll;
+    }
+  
+  
+
+  .card-analytics {
+    min-width:167px;
+    width: 100%;
+    overflow-x: scroll;
+    grid-column: span 12;
+}
+  
+  
+  
+  .span-total{
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .name-container{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    }
+  
+    .card-score{
+      min-width:200px;
+      overflow-x: scroll;
+    }
+
+}
+
+
+@media (0px <= width < 600px) {
+  .card-analytics {
+    min-width:167px;
+    overflow-x: scroll;
+    grid-column: span 12 !important;
+  }
+
+  .card-1-name{
+    grid-column:  1 /span 11 !important;
+    
+  }
+  
+.card-score {
+  min-width:200px;
+  overflow-x: scroll;
+  grid-column: span 12 !important;
+  height: 10px;
+}
+}
+
+body{
+  background-color: rgba(192, 192, 192, 0.661);
+  min-width: 300px;
+  height: auto;
+
+}
+
+p,span{
+  font-family:'Signika', sans-serif; 
+}
 .grid{
   display: grid;
   grid-template-columns: repeat(12 , 1fr);
-  gap:35px;
+  gap:30px;
+  width:auto;
+
 }
 
+header{
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+}
+
+.contain{
+display: flex;
+margin: auto;
+align-items: center;
+justify-content: space-between;
+max-width: 1500px;
+min-width: 300px;
+width: auto;
+height: 90px;
+background-color: white;
+
+
+
+}
+
+
+
+header a{
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+}
+
+.name{
+
+ font-family: 'Roboto';
+ font-size: 2em;
+ font-weight: bold;
+ color:rgb(75, 141, 134);
+ vertical-align: middle ;
+ 
+ 
+}
+
+.workButton{
+height: fit-content;
+cursor: pointer;
+}
+
+.pfp{
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-template{
+  background-color: aliceblue;
+  border-radius: 5%;
+  
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, .2), 
+  -2px -2px 7px rgba(0, 0, 0, .2);
+}
+.card-analytics{
+  /*The height being 300px makes the scroll y when page is smaller*/
+  width: 100%;
+  height: 350px;
+  grid-column: 2 / span 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.total-grid{
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.card-score{
+  grid-column: 6 / span 6;
+    width: 100%;
+}
+
+
+
+.name-container{
+margin-top: 100px;
+margin-bottom: 20px;
+}
+
+.card-1-name{
+  width: fit-content;
+  margin-top:20px;
+  display: inline;
+  grid-column: 2 / span 5;
+  margin-left: 45px;
+  font-size: 2em;
+  color:rgb(23, 58, 23);
+}
+
+.card-2-name{
+  width: fit-content;
+  display: inline;  
+  grid-column: 9 / span 5;
+  font-size: 2em;
+  color:rgb(23, 58, 23);
+}
+
+.prog-text{
+  width: fit-content;
+  height: fit-content;
+  grid-column: span 1;
+  
+}
+.prog-text svg text{
+  font-size:41px;
+  font-weight:bold;
+  transform:rotate(90deg) translate(-5px, -163px);
+}
+
+
+.contain-svg{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: space-between;
+  height: 100%;
+  grid-column: span 3;
+}
+
+
+.task-amount{
+  font-size: 40px;
+  margin-top: 10px;
+  animation: fadein;
+  animation-duration: 1s;
+}
+
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+
+.filler{
+  transition: all 2s ease ;
+}
+
+img.logo {
+   
+    height: 100px;
+    width: 100px;
+    background: transparent;
+   vertical-align: middle;
+     
+}
