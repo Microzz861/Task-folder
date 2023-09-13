@@ -13,6 +13,7 @@ padding: 0;
 margin: 0;
 }
 
+<<<<<<< HEAD
 @media (500px <= width <=1550px ){
   
   
@@ -91,6 +92,11 @@ body{
   min-width: 300px;
   height: auto;
 
+=======
+
+body{
+  background-color: rgba(192, 192, 192, 0.661);
+>>>>>>> a19b048 (Added Dashboard)
 }
 
 p,span{
@@ -100,16 +106,25 @@ p,span{
   display: grid;
   grid-template-columns: repeat(12 , 1fr);
   gap:30px;
+<<<<<<< HEAD
   width:auto;
 
+=======
+>>>>>>> a19b048 (Added Dashboard)
 }
 
 header{
   width: 100%;
+<<<<<<< HEAD
   position: fixed;
   background-color: white;
   z-index: 1;
   top: 0;
+=======
+  position: sticky;
+  background-color: white;
+  
+>>>>>>> a19b048 (Added Dashboard)
 }
 
 .contain{
@@ -117,6 +132,7 @@ display: flex;
 margin: auto;
 align-items: center;
 justify-content: space-between;
+<<<<<<< HEAD
 max-width: 1500px;
 min-width: 300px;
 width: auto;
@@ -128,11 +144,26 @@ background-color: white;
 }
 
 
+=======
+max-width: 1200px;
+height: 90px;
+background-color: white;
+
+}
+@media (500px <= width <=1200px ){
+  .contain{
+    margin: 10px;
+  }
+}
+>>>>>>> a19b048 (Added Dashboard)
 
 header a{
 cursor: pointer;
 text-decoration: none;
+<<<<<<< HEAD
 display: inline-block;
+=======
+>>>>>>> a19b048 (Added Dashboard)
 }
 
 .name{
@@ -141,9 +172,15 @@ display: inline-block;
  font-size: 2em;
  font-weight: bold;
  color:rgb(75, 141, 134);
+<<<<<<< HEAD
  vertical-align: middle ;
  
  
+=======
+ height: fit-content;
+ justify-content: start;
+ display: block;
+>>>>>>> a19b048 (Added Dashboard)
 }
 
 .workButton{
@@ -160,11 +197,15 @@ cursor: pointer;
 .card-template{
   background-color: aliceblue;
   border-radius: 5%;
+<<<<<<< HEAD
   
+=======
+>>>>>>> a19b048 (Added Dashboard)
   box-shadow: 2px 2px 7px rgba(0, 0, 0, .2), 
   -2px -2px 7px rgba(0, 0, 0, .2);
 }
 .card-analytics{
+<<<<<<< HEAD
   /*The height being 300px makes the scroll y when page is smaller*/
   width: 100%;
   height: 350px;
@@ -187,12 +228,37 @@ cursor: pointer;
 
 .name-container{
 margin-top: 100px;
+=======
+  
+  width: 100%;
+  height: 300px;
+  grid-column: 2 / span 4;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.card-score{
+  grid-column: 6 / span 6;
+  width: 100%;
+  height: 100%;
+}
+
+.card-container{
+  margin-left: 30px;
+}
+
+.name-container{
+margin-top: 20px;
+>>>>>>> a19b048 (Added Dashboard)
 margin-bottom: 20px;
 }
 
 .card-1-name{
   width: fit-content;
+<<<<<<< HEAD
   margin-top:20px;
+=======
+>>>>>>> a19b048 (Added Dashboard)
   display: inline;
   grid-column: 2 / span 5;
   margin-left: 45px;
@@ -225,7 +291,11 @@ margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   justify-content: space-between;
+<<<<<<< HEAD
   height: 100%;
+=======
+  height: 80%;
+>>>>>>> a19b048 (Added Dashboard)
   grid-column: span 3;
 }
 
@@ -233,6 +303,7 @@ margin-bottom: 20px;
 .task-amount{
   font-size: 40px;
   margin-top: 10px;
+<<<<<<< HEAD
   animation: fadein;
   animation-duration: 1s;
 }
@@ -260,3 +331,10 @@ img.logo {
    vertical-align: middle;
      
 }
+=======
+}
+
+
+
+
+>>>>>>> a19b048 (Added Dashboard)
