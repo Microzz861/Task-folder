@@ -72,6 +72,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   strokeChange(pendingSVG, pendPercent, pendingPercent, pendTaskNumber, pendingCount);
 
+  const totalTask = document.getElementById('js-total');
+  totalTask.innerHTML = AllTasks; 
 
 });
 
