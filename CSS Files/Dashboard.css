@@ -248,6 +248,19 @@ margin-bottom: 20px;
   
 }
 
+.transfiller{
+  animation: transparentThing .5s linear;
+}
+
+@keyframes transparentThing {
+  0%{
+   stroke-dashoffset: 461.6px;
+  }
+
+  100%{
+    stroke-dashoffset: 0px;
+   }
+}
 .filler{
   transition: all 2s ease ;
 }
