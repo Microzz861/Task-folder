@@ -6,7 +6,7 @@ let incompPercent = 0;
 let pendPercent = 0;
 
 
-let completeCount = 12;
+let completeCount = 13;
 let incompleteCount = 15;
 let pendingCount = 17;
 
@@ -23,7 +23,7 @@ function calcSumTasks(complete, incomplete, pend)
   return sum;
 }
 
-let AllTasks = calcSumTasks(12,15,17);
+let AllTasks = calcSumTasks(15,15,17);
 
 
 function strokeChange(SVG , percent, Number , taskNum , count )
@@ -37,6 +37,7 @@ function strokeChange(SVG , percent, Number , taskNum , count )
   console.log(typeof smallPerc);
   taskNum.innerHTML = count;
   let i=0;
+
     setInterval(()=> {
       
       if(i === smallPerc) clearInterval();
