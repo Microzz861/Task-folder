@@ -14,16 +14,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     document.querySelector('.js-Nav').style.transition = 'width .5s ease';
     document.querySelector('.js-Nav').classList.add('nav-Full');
-    
 
     setTimeout(()=>{
       document.querySelector('.js-Nav').style.transition = 'height .5s ease, opacity .5s ease';
       addH();
-      
 
 
     },500);
 
+    setTimeout(()=>document.getElementById('js-logo-placement').style.display="inliblock",740);
+    
 
     if(window.document.querySelector('.side-Button-Effect2')){     
       document.querySelector('.js-Category').classList.remove('side-Button-Effect2');
@@ -37,23 +37,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   else if(stretched === true)
   {
-    
+
     document.querySelector('.js-Nav').style.transition = 'width .5s ease';
     document.querySelector('.js-Nav').classList.remove('nav-Full');
-  
+
+    setTimeout(()=>{ 
+    document.getElementById('js-logo-placement').style.display="none";}
+    ,500);
    /*
   
       document.querySelector('.js-Nav').style.height='6%';
       */
   
-    setTimeout(()=>{ 
-      document.querySelector('.js-Nav').style.transition = 'height .5s ease';
-  
-      removeH();
+      setTimeout(()=>{ 
+        document.querySelector('.js-Nav').style.transition = 'height .5s ease';
+    
+        removeH();
+        setTimeout(() => {
+          document.getElementById('js-logo-placement').style.display="none";
       
-
-    },500);
-   
+         }, 50);
+      },500);
     if(window.document.querySelector('.side-Button-Effect1')){     
       document.querySelector('.js-Category').classList.remove('side-Button-Effect1');
       console.log('workedwithremove1');
@@ -83,9 +87,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
    setTimeout(()=>{
     document.querySelector('.js-Nav').style.transition = 'height .5s ease, opacity .5s ease';
-    addH();       
+    addH(); 
    },500);
    window.document.querySelector('.js-Nav').style.opacity='.1';       
+   setTimeout(()=>document.getElementById('js-logo-placement').style.display="flex",740);
 
    if(window.document.querySelector('.side-Button-Effect2')){     
      document.querySelector('.js-Category').classList.remove('side-Button-Effect2');
@@ -114,7 +119,10 @@ setTimeout(()=>{document.querySelector('.js-Nav').style.transition = 'width .5 e
     document.querySelector('.js-Nav').style.transition = 'height .5s ease';
 
     removeH();
-   
+    setTimeout(() => {
+      document.getElementById('js-logo-placement').style.display="none";
+      
+     }, 50);
   },500);
 
    

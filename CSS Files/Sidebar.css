@@ -1,27 +1,28 @@
 
 
-  @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
 
 nav
-{
+{ 
 background-color: whitesmoke;
   border-radius: 3px 3px 0 0;
-  box-shadow: 2px 2px 2px rgba(0,0,0, .1);
   display: flex;
   flex-direction: column;
-  height: 70px;
+  height: 90px;
   width: 103px;
   top: 0px;
   left: 0px;
-  z-index: 10000;
+  z-index: 100;
   opacity: 1;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
+  background-color: white;
   transition: width .5s ease, height .5s ease, background-color .5s ease-in-out;
 }
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .nav-Full
@@ -31,7 +32,18 @@ background-color: whitesmoke;
   width: 365px;
   transition: width .5s ease, height .5s ease, background-color .5s ease-in-out;
   opacity: 1;
-  z-index: 1000;
+  z-index: 100000000;
+}
+
+@media (500px <= width <=1200px) {
+  
+  .nav-Full{
+    width: 100%;
+    
+}
+
+
+
 }
 
 .height-Resize
@@ -40,7 +52,7 @@ background-color: whitesmoke;
   height: 100%;
   transition: height .5s ease;
   opacity: 1;
-  z-index: 1000;
+  z-index: 100000000;
 }
 
 
@@ -69,34 +81,32 @@ ul
   margin-top: 10px;
 }
 
- a .logo{
-  width: 300px;
-  text-decoration: none;
-  margin-top: 0px;
-  
-  
-  
- }
 
 .logo
 {
-   display: flex;
-   bottom: -650px;
+   display:none;
+   bottom: 0px;
    position: absolute;
    left: 5px;
+   
+   text-decoration: none !important;
+
+   
 } 
 
-.logo .name
+.logo a.js-position-Logo span
 {
 
  font-family: 'Roboto';
  font-size: 40px;
- margin-left: 30px; 
- bottom: -30px;
- min-width: 240px;
+ max-width: 240px;
  height: fit-content;
  font-weight: bold;
  color:rgb(75, 141, 134);
+ top: 10px;
+ margin-left: 0;
+
+
 
 }
 
@@ -106,8 +116,7 @@ ul
     height: 100px;
     width: 100px;
     background: transparent;
-    left: 0px;
-    
+    vertical-align: middle;
     
 }
 
@@ -136,19 +145,19 @@ li a:active #activate
   opacity: .3;
 }
 
-body
+/*
 {
 
   background-color: lightblue;
   
 }
-
+*/
 .side-Button-Wrapper
 {
   position: relative;
   display: grid;
   grid-template-columns: 50px 1fr;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -189,6 +198,7 @@ body
   font-size: 40px;
   margin-left: 50px; 
   color:rgb(75, 141, 134);
+  text-decoration: none !important;
 
   
 }
@@ -209,6 +219,11 @@ body
   background: transparent;
 }
 
+.bPosition:active
+{
+  transition: transform .2s;
+  transform: scale(1.2);
+}
 .side-Button-Effect1
 {
   transition:transform .5s;
@@ -219,10 +234,7 @@ body
   transition:transform .5s;
   transform: rotate(0deg);
 }
-.js-Color
-{
-  background-color:turquoise;
-}
+
 
 /*nav .half-wrapper#lol
 {
@@ -243,4 +255,3 @@ body
   opacity: .6;
 }
 */
-
