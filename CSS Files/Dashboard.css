@@ -1,8 +1,8 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
 
-  /*
+/*
 font-family: 'ADLaM Display', cursive;
 font-family: 'Noto Sans Sogdian', sans-serif;
 font-family: 'Roboto', sans-serif;
@@ -14,82 +14,82 @@ margin: 0;
 }
 
 @media (500px <= width <=1550px ){
+
+
+ 
+.contain{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-evenly ;
+  max-width: 1200px;
+  min-width: 300px;
+  height: 90px;
+  background-color: white;
   
+  }
   
-   
-  .contain{
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
+  body{
     min-width: 300px;
-    height: 90px;
-    background-color: white;
-    margin: 0 50px;
-    
-    }
-    
-    body{
-      min-width: 300px;
-      height: 100%;
-      overflow: scroll;
-    }
-  
-  
-
-  .card-analytics {
-    min-width:167px;
-    width: 100%;
-    overflow-x: scroll;
-    grid-column: span 12;
-}
-  
-  
-  
-  .span-total{
-    display: flex;
-    align-items: center;
+    height: 100%;
+    overflow: scroll;
   }
-  
-  
-  .name-container{
-    margin-top: 10px;
-    margin-bottom: 5px;
-    }
-  
-    .card-score{
-      min-width:200px;
-      overflow-x: scroll;
-    }
+
+
+
+.card-analytics {
+  min-width:167px;
+  width: 100%;
+  overflow-x: scroll;
+  grid-column: span 12;
+}
+
+
+
+.span-total{
+  display: flex;
+  align-items: center;
+}
+
+
+.name-container{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  }
+
+  .card-score{
+    min-width: 630px;
+
+    overflow-x: scroll
+  }
 
 }
 
 
-@media (0px <= width < 600px) {
-  .card-analytics {
-    min-width:167px;
-    overflow-x: scroll;
-    grid-column: span 12 !important;
-  }
-
-  .card-1-name{
-    grid-column:  1 /span 11 !important;
-    
-  }
-  
-.card-score {
-  min-width:200px;
+@media (0px <= width < 858px) {
+.card-analytics {
+  min-width:167px;
   overflow-x: scroll;
   grid-column: span 12 !important;
-  height: 10px;
-}
 }
 
+.card-1-name{
+  grid-column:  1 /span 11 !important;
+  
+}
+
+.card-score {
+overflow-x: scroll;
+grid-column: span 12 !important;
+height: 10px;
+}
+} 
+
 body{
-  background-color: rgba(192, 192, 192, 0.661);
-  min-width: 300px;
-  height: auto;
+background-color: rgba(192, 192, 192, 0.666);
+min-width: 300px;
+height: auto;
+
 
 <<<<<<< HEAD
 =======
@@ -102,13 +102,13 @@ body{
 }
 
 p,span{
-  font-family:'Signika', sans-serif; 
+font-family:'Signika', sans-serif; 
 }
 .grid{
-  display: grid;
-  grid-template-columns: repeat(12 , 1fr);
-  gap:30px;
-  width:auto;
+display: grid;
+grid-template-columns: repeat(12 , 1fr);
+gap:30px;
+width:auto;
 
 <<<<<<< HEAD
 =======
@@ -118,6 +118,7 @@ p,span{
 }
 
 header{
+<<<<<<< HEAD
   width: 100%;
   position: fixed;
   background-color: white;
@@ -131,11 +132,18 @@ header{
 >>>>>>> a19b048 (Added Dashboard)
 =======
 >>>>>>> 4da2c2c (dashboard chnages without sidebar integrated)
+=======
+width: 100%;
+position: fixed;
+background-color: white;
+z-index: 1;
+top: 0;
+>>>>>>> e569371 (Added category and task score UI)
 }
 
 .contain{
 display: flex;
-margin: auto;
+margin: auto 120px;
 align-items: center;
 justify-content: space-between;
 max-width: 1500px;
@@ -176,8 +184,16 @@ display: inline-block;
 >>>>>>> 4da2c2c (dashboard chnages without sidebar integrated)
 }
 
-.name{
+.titleName{
 
+font-family: 'Roboto';
+font-size: 2em;
+font-weight: bold;
+color:rgb(75, 141, 134);
+vertical-align: middle ;
+
+
+<<<<<<< HEAD
  font-family: 'Roboto';
  font-size: 2em;
  font-weight: bold;
@@ -193,6 +209,8 @@ display: inline-block;
 >>>>>>> a19b048 (Added Dashboard)
 =======
 >>>>>>> 4da2c2c (dashboard chnages without sidebar integrated)
+=======
+>>>>>>> e569371 (Added category and task score UI)
 }
 
 .workButton{
@@ -201,12 +219,13 @@ cursor: pointer;
 }
 
 .pfp{
-  width: 50px;
-  object-fit: cover;
-  border-radius: 50%;
+width: 50px;
+object-fit: cover;
+border-radius: 50%;
 }
 
 .card-template{
+<<<<<<< HEAD
   background-color: aliceblue;
   border-radius: 5%;
   
@@ -217,24 +236,31 @@ cursor: pointer;
 >>>>>>> 4da2c2c (dashboard chnages without sidebar integrated)
   box-shadow: 2px 2px 7px rgba(0, 0, 0, .2), 
   -2px -2px 7px rgba(0, 0, 0, .2);
+=======
+background-color: aliceblue;
+border-radius: 5%;
+
+box-shadow: 2px 2px 7px rgba(0, 0, 0, .2), 
+-2px -2px 7px rgba(0, 0, 0, .2);
+>>>>>>> e569371 (Added category and task score UI)
 }
 .card-analytics{
-  /*The height being 300px makes the scroll y when page is smaller*/
-  width: 100%;
-  height: 350px;
-  grid-column: 2 / span 4;
-  display: flex;
-  flex-direction: column;
+/*The height being 300px makes the scroll y when page is smaller*/
+width: 100%;
+height: 350px;
+grid-column: 2 / span 4;
+display: flex;
+flex-direction: column;
 }
 
 .total-grid{
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
+display: grid; grid-template-columns: 1fr 1fr 1fr;
 }
 
 
 .card-score{
-  grid-column: 6 / span 6;
-    width: 100%;
+grid-column: 6 / span 6;
+  width: 100%;
 }
 
 
@@ -270,6 +296,7 @@ margin-bottom: 20px;
 }
 
 .card-1-name{
+<<<<<<< HEAD
   width: fit-content;
   margin-top:20px;
 <<<<<<< HEAD
@@ -282,30 +309,41 @@ margin-bottom: 20px;
   margin-left: 45px;
   font-size: 2em;
   color:rgb(23, 58, 23);
+=======
+width: fit-content;
+margin-top:20px;
+display: inline;
+grid-column: 2 / span 5;
+margin-left: 45px;
+font-size: 2em;
+color:rgb(23, 58, 23);
+>>>>>>> e569371 (Added category and task score UI)
 }
 
 .card-2-name{
-  width: fit-content;
-  display: inline;  
-  grid-column: 9 / span 5;
-  font-size: 2em;
-  color:rgb(23, 58, 23);
+width: fit-content;
+display: inline;  
+grid-column: 9 / span 5;
+font-size: 2em;
+color:rgb(23, 58, 23);
 }
 
 .prog-text{
-  width: fit-content;
-  height: fit-content;
-  grid-column: span 1;
-  
+width: fit-content;
+height: fit-content;
+grid-column: span 1;
+z-index: 0;
+
 }
 .prog-text svg text{
-  font-size:41px;
-  font-weight:bold;
-  transform:rotate(90deg) translate(-5px, -163px);
+font-size:41px;
+font-weight:bold;
+transform:rotate(90deg) translate(-5px, -163px);
 }
 
 
 .contain-svg{
+<<<<<<< HEAD
   display: grid;
   grid-template-columns: repeat(3,1fr);
   justify-content: space-between;
@@ -317,46 +355,59 @@ margin-bottom: 20px;
 =======
 >>>>>>> 4da2c2c (dashboard chnages without sidebar integrated)
   grid-column: span 3;
+=======
+display: grid;
+grid-template-columns: repeat(3,1fr);
+justify-content: space-between;
+height: 100%;
+grid-column: span 3;
+>>>>>>> e569371 (Added category and task score UI)
 }
 
 
 .task-amount{
-  font-size: 40px;
-  margin-top: 10px;
-  animation: fadein;
-  animation-duration: 1s;
+font-size: 40px;
+margin-top: 10px;
+animation: fadein;
+animation-duration: 1s;
 }
 
 
 @keyframes fadein {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-  
+0%{
+  opacity: 0;
+}
+100%{
+  opacity: 1;
+}
+
 }
 
 .transfiller{
-  animation: transparentThing .5s linear;
+animation: transparentThing .5s linear;
 }
 
 @keyframes transparentThing {
-  0%{
-   stroke-dashoffset: 461.6px;
-  }
+0%{
+ stroke-dashoffset: 461.6px;
+}
 
-  100%{
-    stroke-dashoffset: 0px;
-   }
+100%{
+  stroke-dashoffset: 0px;
+ }
 }
 .filler{
-  transition: all 2s ease ;
+transition: all 2s ease ;
 }
 
-img.logo {
+img.offlogo {
+ 
+  height: 100px;
+  width: 100px;
+  background: transparent;
+ vertical-align: middle;
    
+<<<<<<< HEAD
     height: 100px;
     width: 100px;
     background: transparent;
@@ -373,3 +424,6 @@ img.logo {
 >>>>>>> a19b048 (Added Dashboard)
 =======
 >>>>>>> 4da2c2c (dashboard chnages without sidebar integrated)
+=======
+}
+>>>>>>> e569371 (Added category and task score UI)
