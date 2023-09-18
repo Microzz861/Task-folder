@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="CSS Files/cat.css">
-    <script src="Javascript Files/Category.js"></script>
-  </head>
 
-  <body>
+<head>
+  <link rel="stylesheet" href="CSS Files/cat.css">
+  <script src="Javascript Files/Category.js"></script>
+</head>
+
+<body>
   <div class="cat-task-container" id="cattask">
     <div class="category-container" id="cat">
       <div class="totalScore">
@@ -14,47 +15,52 @@
       </div>
 
       <div class="category-card" id="js-cat-card">
-        
+
         <div class="cat-name">
           <p class="pCategory-name"> Insert Name </p>
           <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" style="vertical-align: middle;" >
-            <circle fill="#ffef09" stroke="none" cx="8" cy="8" r="8"/> 
-            <img width="12" height="12" src="https://img.icons8.com/material-rounded/24/star--v1.png" alt="star--v1" style="position: relative; left:-14px; bottom: -2px"/>
-          </svg>
-          <p class="pCategory-name" style="vertical-align: middle; position: relative; margin-left: -10px; align-items: center;">Category Score: 5 </p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" style="vertical-align: middle;">
+              <circle fill="#ffef09" stroke="none" cx="8" cy="8" r="8" />
+              <img width="12" height="12" src="https://img.icons8.com/material-rounded/24/star--v1.png" alt="star--v1"
+                style="position: relative; left:-14px; bottom: -2px" />
+            </svg>
+            <p class="pCategory-name"
+              style="vertical-align: middle; position: relative; margin-left: -10px; align-items: center;">Category
+              Score: 5 </p>
         </div>
-      </span>
+        </span>
 
         <div class="cat-name" style="margin-right: 0px;">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
-              <circle fill="#00ed24" stroke="none" cx="4" cy="4" r="4"/> 
+              <circle fill="#00ed24" stroke="none" cx="4" cy="4" r="4" />
             </svg>
-          <p class="pCategory"> Completed </p>
-         </span>
-          <a href="#" class="task-dropdown" id="js-dropDownClick" onclick="getCatTasks(document.getElementById('cattask'));">
-              <p class="pCategory" id="js-dropText" style="vertical-align: top;">Display Tasks</p> 
-              <svg id="js-dropClick" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <p class="pCategory"> Completed </p>
+          </span>
+          <a href="#" class="task-dropdown" id="js-dropDownClick"
+            onclick="getCatTasks(document.getElementById('cattask'));">
+            <p class="pCategory" id="js-dropText" style="vertical-align: top;">Display Tasks</p>
+            <svg id="js-dropClick" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 
-                <rect x="0" fill="none" width="24" height="24"/>
-            
-                  <g>
-            
-                   <path d="M7 10l5 5 5-5" />
-            
-                  </g>
-            
-              </svg>
+              <rect x="0" fill="none" width="24" height="24" />
+
+              <g>
+
+                <path d="M7 10l5 5 5-5" />
+
+              </g>
+
+            </svg>
             </span>
           </a>
         </div>
 
-       
+
         </span>
       </div>
-     
+
     </div>
   </div>
-  </body>
+</body>
+
 </html>
