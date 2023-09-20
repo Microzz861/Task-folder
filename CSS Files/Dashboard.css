@@ -221,7 +221,6 @@ flex-direction: column;
 margin-bottom: 30px;
   margin-left: 5px;
   overflow-x: scroll;
-  -webkit-column-count: 1 / span 12;
   
 
 }
@@ -294,6 +293,8 @@ font-size: 40px;
 margin-top: 10px;
 animation: fadein;
 animation-duration: 1s;
+-webkit-animation: fadein;
+-webkit-animation-duration: 1s;
 }
 
 
@@ -307,11 +308,22 @@ animation-duration: 1s;
 
 }
 
+@-webkit-keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+  }
+
 .transfiller{
-animation: transparentThing .5s linear;
+  animation: transparentThing .5s linear;
+-webkit-animation: transparentThing .5s linear;
 }
 
-@keyframes transparentThing {
+ @-webkit-keyframes transparentThing {
 0%{
  stroke-dashoffset: 461.6px;
 }
@@ -320,8 +332,19 @@ animation: transparentThing .5s linear;
   stroke-dashoffset: 0px;
  }
 }
+
+@keyframes transparentThing {
+  0%{
+   stroke-dashoffset: 461.6px;
+  }
+  
+  100%{
+    stroke-dashoffset: 0px;
+   }
+  }
 .filler{
-transition: all 2s ease ;
+-webkit-transition: stroke-dashoffset 2s ease 0s;
+transition: stroke-dashoffset 2s ease 0s;
 }
 
 img.offlogo {

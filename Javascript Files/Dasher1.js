@@ -31,6 +31,7 @@ function strokeChange(SVG , percent, Number , taskNum , count )
   const stroker = circumference * ((100 - percent)/ 100);
 
   SVG.classList.add('filler');
+
   SVG.style.strokeDashoffset = stroker;
 
   const smallPerc = parseInt(percent);
