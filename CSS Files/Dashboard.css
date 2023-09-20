@@ -17,7 +17,7 @@ padding: 0;
 margin: 0;
 }
 
-@media (640px <= width <=1550px ){
+@media (600px <= width <=1550px ){
 
 
  
@@ -36,6 +36,7 @@ margin: 0;
   body{
     min-width: 300px;
     height: 100%;
+
   }
 
 
@@ -99,6 +100,7 @@ margin: 0;
 
 }
 
+
 .card-analytics{
   overflow-x:none !important;
   overflow: none;
@@ -122,8 +124,8 @@ width: 98% !important;
 } 
 
 body{
-background-color: rgba(192, 192, 192, 0.666);
-min-width: 300px;
+  background-color: rgb(229, 240, 240);
+  min-width: 300px;
 height: auto;
 
 

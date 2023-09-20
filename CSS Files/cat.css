@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
 
+
+
+
+@media (0px <= width < 400px) {
+  .pCategory-name1{
+    margin-left: 25px !important;
+    position: relative; 
+    bottom: 20px !important;
+    font-size: 1.6em;
+    font-family: 'Roboto';
+    font-weight: 500;
+  }
+  
+}
 .cat-and-task{
   margin-bottom: 20px;
 }
@@ -16,6 +30,14 @@
   margin-top: 20px;
 }
 
+.pCategory-name1{
+  font-size: 1.6em !important;
+  display: inline-block;
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 500; 
+
+}
 .totalScore{
   display: flex;
   margin: 5px 20px;

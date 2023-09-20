@@ -3,8 +3,35 @@
   grid-template-columns: repeat(12 , 1fr);
   gap:30px; 
   width:auto;  
+  margin-top: 130px;
   }
 
+  body{
+    background-color: rgb(229, 240, 240);
+  }
 
+.category-container{
+ grid-column: 1 / span 5;
+ background-color: aliceblue;
+ 
+ width: 100%;
+ border-radius: 32px;
+background: linear-gradient(145deg, #ffffff, #ffffff);
+box-shadow:  28px 28px 57px #e6e6e6,
+             -28px -28px 57px #ffffff;
+
+}
+
+.task-container{
+  grid-column: 6 / span 7;
+  background-color: aliceblue;
+  height: 100%;
+  width: 100%;
+  border-radius: 32px;
+background: linear-gradient(145deg, #ffffff, #ffffff);
+box-shadow:  28px 28px 57px #e6e6e6,
+             -28px -28px 57px #ffffff;
+
+}
   
   
