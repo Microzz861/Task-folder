@@ -2,7 +2,7 @@ let tScore = 0;
 const impScore = 5;
 const nScore = 3;
 let count = 6;
-let tasked = false;
+let tasked = false;// The tasked has to be an attr with an obj to make  each obj/category have   it's own state of list
 let intcount = 0;
 
 
@@ -76,12 +76,12 @@ function getCatTasks(catID){
       </div>
       `;
       tList.appendChild(tItem);
-      document.getElementById('cattask').appendChild(tList);
+      document.getElementById('js-cat-task-cat').appendChild(tList);
       
       let interval=0;
      const int1 = setInterval(()=>{ if(interval>count){ clearInterval(int1); tasked = true;} else
       {
-      document.getElementById('cattask').
+      document.getElementById('js-cat-task-cat').
       querySelectorAll('.task-card').
       forEach((Node)=>Node.classList.add('task-card-enter'));
       interval++; 

@@ -92,7 +92,6 @@ document.querySelector('header').innerHTML=`<div class="contain">
 </div>`;
 
 document.querySelector('.js-sidebar').innerHTML=`
-<link rel="stylesheet" href="CSS Files/Sidebar.css">
 
 <nav class="js-Nav" id="js-NavBody">
 <div class="container">
@@ -108,7 +107,7 @@ document.querySelector('.js-sidebar').innerHTML=`
   </li>
 
   
-  <li> <a>
+  <li> <a href="Login.html">
       <div class="gridCategory">
         <img src="images/signin.png">
         <span class="name"> Login </span>
@@ -122,7 +121,7 @@ document.querySelector('.js-sidebar').innerHTML=`
   
  
 
-  <li> <a>
+  <li> <a href="Task.html">
       <div class="gridCategory" style="margin-top: 20px;">
         <img src="images/addT.jpg" alt="lol" id="fill-icon-task">
         <span class="name"> Tasks </span>
@@ -140,7 +139,7 @@ document.querySelector('.js-sidebar').innerHTML=`
 
   </ul>
   <div class="logo" id="js-logo-placement">
-  <a href="https://www.google.com" class="js-position-Logo">
+  <a href="Dash part 1.html" class="js-position-Logo">
     
       <img src="images/task.png">
       <span class="name" id="xarveIsLegend"> Taskify </span>

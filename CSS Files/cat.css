@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
 
-
+.cat-and-task{
+  margin-bottom: 20px;
+}
 .cat-task-container{
-  max-width: 630px;
-  height: 500px;
-  background-color: lightblue;
+
+  height: 100%;
   position: relative;
   border:none;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 0;
+  margin-top: 20px;
 }
 
 .totalScore{
@@ -22,8 +25,8 @@
 }
 
 .scoreP{
-  font-size: 1.5em;
-  font-family: 'Roboto';
+  font-size: 2em;
+ 
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -34,7 +37,7 @@
   margin: 0px 20px;
   flex-direction: column;
   background-color: white;
-  z-index: 100;
+  z-index: 1;
   
 }
 
@@ -67,7 +70,7 @@
 
 .task-card-enter{
   transition: all ease .5s;
-  bottom: 16px;
+  bottom: 0px;
   z-index: 1;
   
 }
