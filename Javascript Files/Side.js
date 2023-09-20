@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     },500);
 
-    setTimeout(()=>document.getElementById('js-logo-placement').style.display="inliblock",740);
+    setTimeout(()=>document.getElementById('js-logo-placement').style.display="inline-block",740);
     
 
     if(window.document.querySelector('.side-Button-Effect2')){     

@@ -1,0 +1,60 @@
+header{
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  
+  }
+
+header a{
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  }
+
+.contain{
+  display: flex;
+  margin: auto 120px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  min-width: 300px;
+  width: auto;
+  height: 90px;
+  background-color: white;
+ 
+
+  }
+
+img.offlogo {
+ 
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  vertical-align: middle;
+     
+}
+
+.workButton{
+  height: fit-content;
+  cursor: pointer;
+  }
+
+.pfp{
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+ }
+
+ .titleName{
+  font-family: 'Roboto';
+  font-size: 2em;
+  font-weight: bold;
+  color:rgb(75, 141, 134);
+  vertical-align: middle;
+  }
+
+  body{
+    background-color: rgb(244, 232, 232);
+  }
