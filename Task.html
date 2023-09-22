@@ -20,13 +20,117 @@
   
     </div>
     
-    <div class="grid">
+    <div class="grid">  
       <div class="category-container">
-        <p>d</p><p>d</p><p>d</p><p>d</p><p>d</p><p>d</p>
+        <div class="cat-option">
+          <p style="color:rgb(23, 58, 23);"> Categories </p>
+          <div class="sort-cat">
+            <p> Sort-By  </p>
+            <select class="sort-dropdown">
+              <option id="C-E-L"> Select </option>
+              <option id="C-E-L"> Earliest-Latest </option>
+              <option id="C-L-E"> Latest-Earliest </option>
+              <option id="C-IP"> In progress </option>
+              <option id="C-C"> Completed </option>
+            </select>
+          </div>  
+
+          
+        </div>
+        <button class="Add-cat-button"> Add category </button>
+        
+        <div class="cat-display">
+          <div class="full-cat-container">
+          <div class="category">
+            <div class="cat-color" id="js-choose-color">
+            
+            </div>
+            <div class="Therest">
+            <div class="cat-Name">
+              <p style="font-size: 1.6em;"> Dishes </p>
+              <span id="js-cat-date"> Date Added: 9/21/23 </span>
+          </div>      
+          <div class="task-progress">
+            <div class="progress">
+              <p> Completion </p>
+                <div class="contain-bar-percent">
+              <div class="progress-bar">
+                <div class="coat-bar" id="js-category-coater">
+                </div>
+
+              </div>
+              <p class="percent" id="js-category-percent"> 
+                  90%
+              </p>
+            
+            </div>
+
+            </div>
+            <div class="task-amount">
+              <span style="margin: 0px !important;"> Completed:</span>
+              <span style="margin: 0px !important;" id="js-completed-cat">15<span id="js-total-cat-task" style="font-size: 1.5em; margin: 0px !important;">/</span>25</span>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="manage-cat">
+        <p>Manage</p>
+      </div>
+    </div>
+      </div>
+      </div>
+    
+      <hr class="vline">
+      
+
+      
+    
 
       <div class="task-container">
-s 
+        <div class="cat-option">
+          <p style="color:rgb(23, 58, 23);"> Tasks </p>
+          <div class="sort-cat">
+            <p> Sort-By  </p>
+            <select class="sort-dropdown">
+              <option id="C-E-L"> Select </option>
+              <option id="C-E-L"> Earliest-Latest </option>
+              <option id="C-L-E"> Latest-Earliest </option>
+              <option id="C-IP"> In progress </option>
+              <option id="C-C"> Completed </option>
+            </select>
+          </div>  
+
+          
+        </div>
+        <button class="Add-task-button"> Add Task </button>
+        <div class="display-task">
+        <div class="task">
+         
+
+          
+          <div class="task-name">
+          <p> Dry Dishes </p>
+          <div class="checkbox-container">
+
+            <input type="checkbox" class="task-checkbox">
+            <p style="margin-left:0px !important"> Completed? </p>
+            
+            
+        </div>
+      </div>
+      <p style="margin: 0px 0px 5px 20px; "> Description: </p>
+
+        <div class="task-description">
+          <p>- Nour must wash the dishes asap so that he doesn't get bullied by mom SO HE SHOULD CLEAN DEM DISHES.</p>
+        </div>
+        
+        <div class="task-date">
+          <p id="js-task-added"> Date Added: 9/21/2023</p>
+          <p id="js-task-due"> Date Due: 9/21/2023</p>
+
+        </div>
+      </div>
+    </div>
       </div>
     </div>
    

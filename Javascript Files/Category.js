@@ -4,18 +4,19 @@ const nScore = 3;
 let count = 6;
 let tasked = false;// The tasked has to be an attr with an obj to make  each obj/category have   it's own state of list
 let intcount = 0;
+let clicked = false;
 
 
 
 
 
 function getCatTasks(catID){
-  const tList = document.createElement('ul');
 
   
   console.log(tasked);
+  console.log(clicked);     
 
-  if(tasked === true){ 
+  if(tasked && clicked){ 
 
     const int = setInterval(()=>{ 
       if(intcount > 6){
@@ -24,6 +25,9 @@ function getCatTasks(catID){
       document.getElementById('LIST').remove();
       console.log('tasked is ' + tasked);     
       tasked = false;
+      clicked = false;
+      tasked = false;
+
  } 
     else
     {
@@ -40,23 +44,28 @@ function getCatTasks(catID){
   },10);
   }
 
-  else if(tasked === false){
-  //without node.createElement/fragment
-  tList.style.maxHeight='100%';
-  tList.style.display='block';
-  tList.style.transition = 'height ease .5s';
-  tList.style.flexDirection='columns';
-  tList.id='LIST';
+else if(tasked === false){
+  if(!clicked)
+  {
+      clicked = true;
+    //without node.createElement/fragment
+    const tList = document.createElement('ul');
+
+    tList.style.maxHeight='100%';
+    tList.style.display='block';
+    tList.style.transition = 'height ease .5s';
+    tList.style.flexDirection='columns';
+    tList.id='LIST';
 
   
 
 
-  let taskString = '';
-  let i=0;
-  let c=6;
-  setInterval(()=>
-  {
-    if(i>c) clearInterval();
+    let taskString = '';
+    let i=0;
+    let c=6;
+    const l = setInterval(()=>
+    {
+    if(i>c) {clearInterval(l); tasked = true;}
     else{
       const tItem = document.createElement('li');
       tItem.style.display='block';
@@ -79,30 +88,37 @@ function getCatTasks(catID){
       document.getElementById('js-cat-task-cat').appendChild(tList);
       
       let interval=0;
-     const int1 = setInterval(()=>{ if(interval>count){ clearInterval(int1); tasked = true;} else
+     const int1 = setInterval(()=>{ if(interval>count){ clearInterval(int1);} else
       {
       document.getElementById('js-cat-task-cat').
       querySelectorAll('.task-card').
       forEach((Node)=>Node.classList.add('task-card-enter'));
       interval++; 
-    }},10);
+    }},150);
 
 
       i++;
     //  console.log(taskString);
     }
-  },650);
-//document.getElementById('js-task-card').clastList.add('task-card-enter'); 
-  console.log(tList);
-  console.log(tasked);
+    },650);
+
+    //document.getElementById('js-task-card').clastList.add('task-card-enter'); 
+    console.log(tList);
+    console.log(tasked);
   
-  i=0;
+    i=0;
   
-  return true;
-  
+    return true;
+
+  }
+
+  else if(clicked === true ){
+    console.log("Not yet");
+    return "Lol";
+  }
 }
-return console.log(tasked);
 }
+
 
 
 
@@ -117,6 +133,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 });
+
+
 /*
  <div class="task-card task-card-enter" id="js-task-card">
         <div class="cat-name">
