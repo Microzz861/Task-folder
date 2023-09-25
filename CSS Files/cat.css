@@ -4,16 +4,30 @@
 
 
 
-@media (0px <= width < 400px) {
+@media (0px <= width < 520px) {
   .pCategory-name1{
     margin-left: 25px !important;
     position: relative; 
     bottom: 20px !important;
-    font-size: 1.6em;
+    font-size: 1.1em !important;
     font-family: 'Roboto';
     font-weight: 500;
   }
   
+  
+
+  .pCategory-name{
+    font-size: 1.1em !important;
+  }
+
+ .move-back-a-little{
+  margin-left: -20px !important;
+}
+}
+
+
+.move-back-a-little{
+  margin-left: 0px;
 }
 .cat-and-task{
   margin-bottom: 20px;
@@ -101,6 +115,13 @@
   bottom: 16px;
   z-index: 1;
   
+}
+
+.pCategory-name12{
+  vertical-align: middle; 
+  position: relative;
+  margin-left: -10px;
+  align-items: center;
 }
 .cat-name{
   display: flex;
