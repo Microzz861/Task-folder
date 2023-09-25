@@ -40,8 +40,8 @@
         <button class="Add-cat-button"> Add category </button>
         
         <div class="cat-display">
-          <div class="full-cat-container">
-          <div class="category">
+          <div class="full-cat-container" onmouseleave="removeCatManager('js-managebutton');">
+          <div class="category" onmouseover="displayCatManager('js-managebutton');" >
             <div class="cat-color" id="js-choose-color">
             
             </div>
@@ -73,10 +73,10 @@
           </div>
         </div>
       </div>
-      <div class="manage-cat">
-        <p>Manage</p>
-      </div>
-    </div>
+      <button class="manage-cat" id="js-managebutton">
+        Manage
+    </button>
+  </div>
       </div>
       </div>
     

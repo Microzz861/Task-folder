@@ -2,7 +2,17 @@
 
 
 
+function displayCatManager(manageID){
+  const manager = document.getElementById(String(manageID));
+  manager.style.transition = 'all ease 500ms';
+  manager.style.right = '20px';
+  
 
+}
+function removeCatManager(manageID){
+  const manager = document.getElementById(String(manageID));
+  manager.style.right = '80px';
+}
 
 
 
@@ -80,3 +90,4 @@ document.querySelector('.js-sidebar').innerHTML=`
 </div>
 </nav>`;
 }); 
+
