@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="CSS Files/Modal.css">
+  <script src="Javascript Files/Modal.js"></script>
+</head> 
+
+<body>
+  <button id="js-open-cat-modal"> Category </button>
+  <button id="js-open-task-modal"> Task </button>
+
+  <div class="task-modal" id="js-taskModal">
+    <div class="modal-title">
+      <p class="title"> Add Task </p>
+    </div>
+    <div class="modal-body" id="js-task-modal-body">
+      <div class="task-Name">
+        <span> Name: </span> <input type="text" id="js-catName">
+        </div> 
+      <div class="description-container">
+        <form class="add-task-details">
+          <span class="description"> Please type a description of the task below </span>
+          <textarea class="text-description" maxlength='1000' minlength='100'>  
+          </textarea>
+          
+          <div class="due-date">
+            <span> Due Date: </span>
+            <input type="date" class="date-input" id="js-dateSelect">
+          </div>
+      
+          <div class="task-buttons">
+            <button class="add-task-button"> Add Task </button>
+            <button class="cancel-task-button"> Cancel </button>
+
+          </div>  
+        </form>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="category-modal" id="js-catModal">
+    <div class="modal-title">
+      <p class="title"> Add Category </p>
+    </div>
+    <div class="modal-color" id="js-modal-body-color">
+    <div class="modal-body" id="js-cat-modal-body">
+      <div class="cat-Name">
+      <span> Name: </span> <input type="text" id="js-catName">
+      </div> 
+      <div class="color-chooser">
+        <span> Category Color: </span>
+        <select class="color-dropdown" id="js-selected-color">
+          <option style="color:black"> Select </option>
+          <option id="js-blue"> Blue </option>
+          <option id="js-red"> Red </option>
+          <option id="js-green"> Green </option>
+          <option id="js-pink"> Pink </option>
+          <option id="js-gray"> Gray </option>
+        </select>
+      </div>
+      <div class="cat-buttons">
+        <button class="add-cat"> Add </button>
+        <button class="cancel-cat"> Cancel </button>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  
+
+  <div id="screen-overlay"></div>
+  
+</body>
+
+</html>
