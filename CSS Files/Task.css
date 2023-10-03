@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Lato&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Lato&family=Noto+Sans+Sogdian&family=Open+Sans&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
+
 .grid{
   display: grid;
   grid-template-columns: repeat(12 , 1fr);
@@ -59,6 +61,10 @@ body{
   justify-content: space-between;
 }
   
+.full-cat-container:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .1);
+}
 
 .vline
 {
@@ -158,11 +164,12 @@ margin: 0px 5px 0px 10px;
   font-size: 1.4em;
   color:white;
   align-items: center;
-  margin: 10px 50px 10px 50px;
-  cursor: pointer;
   box-shadow: 2px 2px 6px rgb(149, 41, 173);
   border: none;
   height: 50px;
+  width: 100%;
+  cursor: pointer;
+  animation: activate ease 250ms;
   
 }
 
@@ -216,8 +223,93 @@ margin: 0px 5px 0px 10px;
   /*Keep the - and allow the rest to bve added to this p*/
 }
 
+.add-delete-cat{
+    display: flex;
+    margin: 10px 50px 10px 50px;
 
+}
+.deleteCat{
+  justify-content: center;
+  width: 100%;
+  visibility: hidden;  
+  display: none;
+  opacity: 0;
+  transition: opacity ease-in 200ms;
 
+  
+}
+
+.deleteCat-activated{
+  visibility: visible !important;
+  justify-content: space-around;
+  display: flex;
+  
+
+}
+
+.delete-cat-button{
+  height: 50px;
+  color: white;
+  background-color: rgba(255,0,0,.8);
+  border:1px solid gray;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Open Sans';
+
+}
+
+.cancelDelete-cat-button{
+  height: 50px;
+  color: white;
+  background-color: rgba(174, 0, 255, 0.8);
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Open Sans';
+
+}
+
+.Add-cat-button-deactivated{
+  
+  animation: deactivate ease 250ms;
+  
+}
+
+@keyframes deactivate{
+  from {width:100%}
+   to {width: 0%;
+    }
+}
+
+@keyframes activate{
+  from {width:0%}
+   to {width: 100%;
+    }
+}
+
+@keyframes mid-lr{
+  from{
+    justify-content: left;
+
+  }
+  to{
+    justify-content: center;
+  }
+}
+
+@-webkit-keyframes mid-lr{
+  from{
+    justify-content: left;
+
+  }
+  to{
+    justify-content: center;
+  }
+}
 @-webkit-keyframes bar{
 
   0%{
@@ -240,7 +332,10 @@ margin: 0px 5px 0px 10px;
 
 .Therest{
   background-color: white;
-  border-radius: 30px;
+  overflow: hidden;
+  z-index: 1;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .progress-bar{
   width: 150px;
@@ -263,7 +358,7 @@ margin: 0px 5px 0px 10px;
 }
 .coat-bar{
   background: linear-gradient(315deg, #2EAAFA,#1F2F98);
-  width: 90%;
+  width: 0%;
   height: 100%;
   border-radius:20px;
   animation: bar 1s;
@@ -299,6 +394,8 @@ margin: 0px 5px 0px 10px;
   
 .full-cat-container{
   display: flex;
+  height: fit-content;
+
 }
 .manage-cat{
   display:inline;

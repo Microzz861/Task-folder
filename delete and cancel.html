@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Lato&family=Noto+Sans+Sogdian&family=Open+Sans&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
+
+.Add-cat-button{
+  background-color: rgb(153, 26, 153);
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 1.4em;
+  color:white;
+  align-items: center;
+  box-shadow: 2px 2px 6px rgb(149, 41, 173);
+  border: none;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  transition: all ease-in 250ms;
+  animation: activate ease 250ms;
+
+}
+
+.add-delete-cat{
+    display: flex;
+    margin: 10px 50px 10px 50px;
+}
+
+.deleteCat{
+  justify-content: center;
+  width: 100%;
+  visibility: hidden;  
+  display: none;
+  opacity: 0;
+  transition: opacity ease-in 200ms;
+
+  
+}
+
+.deleteCat-activated{
+  visibility: visible !important;
+  justify-content: space-around;
+  display: flex;
+  
+
+}
+
+.delete-cat-button{
+  height: 50px;
+  color: white;
+  background-color: rgba(255,0,0,.8);
+  border:1px solid gray;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Open Sans';
+
+}
+
+.cancelDelete-cat-button{
+  height: 50px;
+  color: white;
+  background-color: rgba(174, 0, 255, 0.8);
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Open Sans';
+
+}
+
+.Add-cat-button-deactivated{
+  
+  animation: deactivate ease 250ms;
+  
+}
+
+@keyframes deactivate{
+  from {width:100%}
+   to {width: 0%;
+    }
+}
+
+@keyframes activate{
+  from {width:0%}
+   to {width: 100%;
+    }
+}
+
+@keyframes mid-lr{
+  from{
+    justify-content: left;
+
+  }
+  to{
+    justify-content: center;
+  }
+}
+
+@-webkit-keyframes mid-lr{
+  from{
+    justify-content: left;
+
+  }
+  to{
+    justify-content: center;
+  }
+}
+    </style>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+      const deleteManager = document.getElementById('js-deleteManager');
+      const addButton = document.querySelector('[data-CatAddButton]');
+      const cancelDelete = document.querySelector('[data-cancelDelCat]');
+
+      const showManager = document.getElementById('js-editCat');
+      showManager.addEventListener('click',()=>{
+        addButton.classList.add('Add-cat-button-deactivated');
+        setTimeout(()=>{ addButton.style.display = 'none';
+        deleteManager.classList.add('deleteCat-activated'); },250);
+        setTimeout(()=>{
+          deleteManager.style.transition = 'opacity ease 200ms'
+          deleteManager.style.opacity = '1';},450);
+        
+      });
+   
+
+    cancelDelete.addEventListener('click',()=>{
+      deleteManager.style.opacity = '0';
+      setTimeout(()=> {
+        deleteManager.classList.remove('deleteCat-activated');
+        addButton.classList.remove('Add-cat-button-deactivated');
+        addButton.style.display = 'flex';
+       },200);
+      setTimeout(()=>{
+        addButton.style.width = '100%';
+      },450);
+    });
+    
+  });
+    </script>
+  </head>
+
+  <body>
+    <div class="add-delete-cat">
+      <div class="deleteCat" id="js-deleteManager">
+        <button class="delete-cat-button"> Delete Category </button>
+        <button class="cancelDelete-cat-button" data-cancelDelCat> Cancel </button>
+      </div>
+      <button class="Add-cat-button" data-CatAddButton id="js-cat-openModal"> Add category </button>
+    </div>
+
+    <button id="js-editCat"> lol </button>
+  </body>
+</html>

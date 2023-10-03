@@ -59,7 +59,7 @@
       <div class="modal-color" id="js-modal-body-color">
       <div class="modal-body" id="js-cat-modal-body">
         <div class="cat-Name">
-        <span> Name: </span> <input type="text" id="js-catName">
+        <span> Name: </span> <input type="text" id="js-input-catName">
         </div> 
         <div class="color-chooser">
           <span> Category Color: </span>
@@ -73,8 +73,8 @@
           </select>
         </div>
         <div class="cat-buttons">
-          <button class="add-cat"> Add </button>
-          <button class="cancel-cat" id="js-no-add-cat"> Cancel </button>
+          <button class="add-cat" onclick="addCategory()"> Add </button>
+          <button class="cancel-cat" id="js-no-add-cat" > Cancel </button>
   
         </div>
       </div>
@@ -102,38 +102,45 @@
 
           
         </div>
-        <button class="Add-cat-button" id="js-cat-openModal"> Add category </button>
+        <div class="add-delete-cat">
+          <div class="deleteCat" id="js-deleteCatManager">
+            <button class="delete-cat-button" id="js-cat-deletor"> Delete Category </button>
+            <button class="cancelDelete-cat-button" data-cancelDelCat> Cancel </button>
+          </div>
+          <button class="Add-cat-button" data-CatAddButton id="js-cat-openModal"> Add category </button>
+        </div>
+        
         
         <div class="cat-display">
-          <div class="full-cat-container" onmouseleave="removeCatManager('js-managebutton');">
+          <div class="full-cat-container" onmouseleave="removeCatManager('js-managebutton');" onclick=" currentlySelected = document.getElementById('js-Insert-catName').textContent; console.log(currentlySelected)">
           <div class="category" id="js-category-body" onmouseover="displayCatManager('js-managebutton');" >
             <div class="cat-color" id="js-choose-color">
             
             </div>
             <div class="Therest">
             <div class="cat-Name">
-              <p style="font-size: 1.6em;"> Dishes </p>
-              <span id="js-cat-date"> Date Added: 9/21/23 </span>
+              <p style="font-size: 1.6em;" id="js-Insert-catName"> Dishes </p>
+              <span id="js-Insert-catDate"> Date Added: 9/21/23 </span>
           </div>      
           <div class="task-progress">
             <div class="progress">
               <p> Completion </p>
                 <div class="contain-bar-percent">
               <div class="progress-bar">
-                <div class="coat-bar" id="js-category-coater">
+                <div class="coat-bar" id="js-Insert-catCoater">
                 </div>
 
               </div>
-              <p class="percent" id="js-category-percent"> 
-                  90%
+              <p class="percent" id="js-Insert-catPercent"> 
+                  0%
               </p>
             
             </div>
 
             </div>
             <div class="task-amount">
-              <span style="margin: 0px !important;"> Completed:</span>
-              <span style="margin: 0px !important;" id="js-completed-cat">15<span id="js-total-cat-task" style="font-size: 1.5em; margin: 0px !important;">/</span>25</span>
+              <span style="margin: 0px !important;" > Completed:</span>
+              <span style="margin: 0px !important;" id="js-Insert-catCompleted">15<span style="font-size: 1.5em; margin: 0px !important;">/</span><span id="js-Insert-catTotalTask" style="margin: 0px !important; font-size: 1em;">25</span></span>
             </div>
           </div>
         </div>
