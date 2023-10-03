@@ -5,6 +5,12 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 
 let fullArray = null;
 
+
+if(localStorage.getItem('fullArray') === null) localStorage.setItem('fullArray', '[]');
+  else fullArray = JSON.parse(localStorage.getItem('fullArray'));
+  console.log(fullArray);
+
+
 let catModal = null;
 let taskModal = null;
 
@@ -12,7 +18,6 @@ let taskModal = null;
 let modalColor = null;
 let colorOption = null;
 
-let colorselec = null;
 
 let currentlySelected = null;
 
@@ -22,9 +27,7 @@ let cancelCatDelete = null;
 let deleteCatButton = null;
 
 
-if(localStorage.getItem('fullArray') === null) localStorage.setItem('fullArray', '[]');
-  else fullArray = JSON.parse(localStorage.getItem('fullArray'));
-  console.log(typeof fullArray);
+
 
   
 
@@ -131,6 +134,8 @@ function addColor(color){
 
 }
 }
+
+
 function addOntoCat(category, color, date){
  const displayer = document.querySelector('.cat-display');
  const bgColor = addColor(color);
@@ -202,25 +207,25 @@ displayer.appendChild(newCategory);
   displayTasks(category);
  });
 
-      showManager.addEventListener('click',()=>{
-        addCatButton.classList.add('Add-cat-button-deactivated');
-        setTimeout(()=>{ addCatButton.style.display = 'none';
-        deleteCatManager.classList.add('deleteCat-activated'); },250);
-        setTimeout(()=>{
+  showManager.addEventListener('click',()=>{
+   addCatButton.classList.add('Add-cat-button-deactivated');
+   setTimeout(()=>{ addCatButton.style.display = 'none';
+   deleteCatManager.classList.add('deleteCat-activated'); },250);
+     setTimeout(()=>{
           deleteCatManager.style.transition = 'opacity ease 200ms'
           deleteCatManager.style.opacity = '1';},450);
-        
-      });
+        });
    
-
- 
-
-
- 
- 
- 
 }
 
+function displayCategory(){
+  for(let i = 0; i < fullArray.length; i++){
+    const name = fullArray[i].catName;
+    const color = fullArray[i].color;
+    const date = fullArray[i].dateCreated;
+    addOntoCat(name, color, date);
+  }
+}
 function displayTasks(category){
 
 }
@@ -309,17 +314,20 @@ function findIndex(category){
   for(let i=0; i<fullArray.length; i++){
   
     if (category === fullArray[i].catName) {
-      console.log(fullArray[i].catName + 'this is array index' + i);
+      console.log(fullArray[i].catName + ', this is array index ' + i);
       return i;
   }
   
 }
 }
+addCatButton = document.querySelector('[data-CatAddButton]');
 
+console.log(addCatButton + 'LOL');
 
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded",()=>{
+  displayCategory();
 
-  addCatButton = document.querySelector('[data-CatAddButton]');
+  
   deleteCatManager = document.getElementById('js-deleteCatManager');
   cancelCatDelete = document.querySelector('[data-cancelDelCat]');
   deleteCatButton = document.getElementById('js-cat-deletor');
@@ -449,9 +457,8 @@ document.querySelector('.js-sidebar').innerHTML=`
 
 </div>
 </nav>`;
-}); 
 
-
+});
 
 /*
 <div class="full-cat-container" onmouseleave="removeCatManager('js-managebutton'); ">

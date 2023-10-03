@@ -1,10 +1,11 @@
 let stretched = false;
 let color= false;
-let Button;
+let Button = null;
 
 
 window.addEventListener("DOMContentLoaded", (event) => {
-   Button = window.document.getElementById('js-Side');
+   Button = document.getElementById('js-Side');
+   console.log(Button);
     
   Button.addEventListener('click',()=>{
 
@@ -70,10 +71,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
   return console.log('worked');
   });
-});
 
 
-window.addEventListener("DOMContentLoaded", (event) => {
+
+
   Link = window.document.getElementById('js-spanThing');
    
  Link.addEventListener('click',()=>{
