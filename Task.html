@@ -26,12 +26,12 @@
       </div>
       <div class="modal-body" id="js-task-modal-body">
         <div class="task-Name">
-          <span> Name: </span> <input type="text" id="js-catName">
+          <span> Name: </span> <input type="text" id="js-taskName">
           </div> 
         <div class="description-container">
           <form class="add-task-details">
             <span class="description"> Please type a description of the task below </span>
-            <textarea class="text-description" maxlength='1000' minlength='100'>  
+            <textarea class="text-description" maxlength='1000' minlength='20'>  
             </textarea>
             
             <div class="due-date">
@@ -40,8 +40,8 @@
             </div>
         
             <div class="task-buttons">
-              <button class="add-task-button"> Add Task </button>
-              <button class="cancel-task-button" id="js-no-add-task"> Cancel </button>
+              <button type="button" class="add-task-button" onclick="addTask()"> Add Task </button>
+              <button type="button" class="cancel-task-button" id="js-no-add-task"> Cancel </button>
   
             </div>  
           </form>
@@ -111,44 +111,8 @@
         
         
         <div class="cat-display">
-          <div class="full-cat-container" onmouseleave="removeCatManager('js-managebutton');" onclick=" currentlySelected = document.getElementById('js-Insert-catName').textContent; console.log(currentlySelected)">
-          <div class="category" id="js-category-body" onmouseover="displayCatManager('js-managebutton');" >
-            <div class="cat-color" id="js-choose-color">
-            
-            </div>
-            <div class="Therest">
-            <div class="cat-Name">
-              <p style="font-size: 1.6em;" id="js-Insert-catName"> Dishes </p>
-              <span id="js-Insert-catDate"> Date Added: 9/21/23 </span>
-          </div>      
-          <div class="task-progress">
-            <div class="progress">
-              <p> Completion </p>
-                <div class="contain-bar-percent">
-              <div class="progress-bar">
-                <div class="coat-bar" id="js-Insert-catCoater">
-                </div>
-
-              </div>
-              <p class="percent" id="js-Insert-catPercent"> 
-                  0%
-              </p>
-            
-            </div>
-
-            </div>
-            <div class="task-amount">
-              <span style="margin: 0px !important;" > Completed:</span>
-              <span style="margin: 0px !important;" id="js-Insert-catCompleted">15<span style="font-size: 1.5em; margin: 0px !important;">/</span><span id="js-Insert-catTotalTask" style="margin: 0px !important; font-size: 1em;">25</span></span>
-            </div>
-          </div>
+          
         </div>
-      </div>
-      <button class="manage-cat" id="js-managebutton">
-        Manage
-    </button>
-  </div>
-      </div>
       </div>
     
       <hr class="vline">
@@ -159,7 +123,7 @@
 
       <div class="task-container">
         <div class="cat-option">
-          <p style="color:rgb(23, 58, 23);"> Tasks </p>
+          <p style="color:rgb(23, 58, 23);" id="js-catTasks-name"> Tasks </p>
           <div class="sort-cat">
             <p> Sort-By  </p>
             <select class="sort-dropdown">
@@ -175,32 +139,6 @@
         </div>
         <button class="Add-task-button" id="js-task-openModal"> Add Task </button>
         <div class="display-task">
-        <div class="task">
-         
-
-          
-          <div class="task-name">
-          <p> Dry Dishes </p>
-          <div class="checkbox-container">
-
-            <input type="checkbox" class="task-checkbox">
-            <p style="margin-left:0px !important"> Completed? </p>
-            
-            
-        </div>
-      </div>
-      <p style="margin: 0px 0px 5px 20px; "> Description: </p>
-
-        <div class="task-description">
-          <p>- Nour must wash the dishes asap so that he doesn't get bullied by mom SO HE SHOULD CLEAN DEM DISHES.</p>
-        </div>
-        
-        <div class="task-date">
-          <p id="js-task-added"> Date Added: 9/21/2023</p>
-          <p id="js-task-due"> Date Due: 9/21/2023</p>
-
-        </div>
-      </div>
     </div>
       </div>
     </div>

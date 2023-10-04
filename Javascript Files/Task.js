@@ -26,6 +26,8 @@ let deleteCatManager = null;
 let cancelCatDelete = null;
 let deleteCatButton = null;
 
+let addTaskButton = null; // The query selector add-task-button is different than Add-task-button
+
 
 
 
@@ -40,14 +42,23 @@ function getCurrentDate(){
   return fullDate;
 }
 
-function duplicatePreventor(category){
-  for(var i=0 ;i<fullArray.length;i++){
-    if(category === fullArray[i].catName) 
+function duplicatePreventor(newItem,type){
+  if(type === 'category'){
+  for(var i = 0; i < fullArray.length; i++){
+    if(newItem === fullArray[i].catName) 
     return true;
     }
     return false;
   }
-
+  else if(type === 'task'){
+    let index = findIndex(currentlySelected);
+    for(var i = 0; i < fullArray[index].Tasks.length; i++){
+      if(fullArray[index].Tasks[i].Name === newItem)
+      return true;
+  }
+    return false;
+  }
+}
 
 
   class Category{ 
@@ -70,25 +81,23 @@ function duplicatePreventor(category){
 class Task{
   static taskScore = 5;
   
-  constructor(Name, Description, taskDateCreated, DueDate, completion){
+  constructor(Name, Description, DueDate){
     this.Name = Name;
     this.Description = Description;
-    this.taskDateCreated = taskDateCreated;
+    this.taskDateCreated = getCurrentDate();
     this.DueDate = DueDate;
-    this.completion = completion; //default value is false if not specified in constructor
+    this.completion = 'Pending'; //default value is false if not specified in constructor
   }
 
     get Tasks(){
       return this.displayTask();
     }
-    displayTask(){
-    return this.Name;
-  }
+    
 }
 
 function addCategory(){
   let name = document.getElementById('js-input-catName').value;
-  const isDuplicate = duplicatePreventor(name);
+  const isDuplicate = duplicatePreventor(name,'category');
   if(isDuplicate){
     alert("You already have a category with the same name, pick a new one");
   }
@@ -100,8 +109,66 @@ function addCategory(){
     addOntoCat(name,color,date);
     displayArray();  
   }
-  
 }
+
+function addTask(){
+  let name = document.getElementById('js-taskName').value;
+  const isDuplicate = duplicatePreventor(name,'task');
+  if(isDuplicate){
+    alert("You already have a category with the same name, pick a new one");
+  }
+  else{
+    let description = document.querySelector('.text-description').value;
+    let dueDate = document.getElementById('js-dateSelect').value;
+    const task = new Task(name, description, dueDate);
+    updateTask(task);
+    addOntoTask(name, description, dueDate, task.taskDateCreated);
+    displayTasks();
+  }
+
+}
+
+function addOntoTask(name, description, dueDate, dateAdded){
+ const taskDisplay = document.querySelector('.display-task');
+ const newTask =document.createElement('div');
+  newTask.classList='task';
+  newTask.innerHTML = ` <div class="task-name">
+  <p id="js-${name}-Name"> Dry Dishes </p>
+  <div class="checkbox-container">
+
+    <input type="checkbox" class="task-checkbox">
+    <p style="margin-left:0px !important"> Completed? </p>
+    
+    
+</div>
+</div>
+<p style="margin: 0px 0px 5px 20px; "> Description: </p>
+
+<div class="task-description">
+  <p id="js-${name}-description"></p>
+</div>
+
+<div class="task-date">
+  <p id="js-${name}-date-added"></p>
+  <p id="js-${name}-date-due"></p>
+
+</div>
+  `;
+
+   taskDisplay.appendChild(newTask);
+
+  document.getElementById(`js-${name}-Name`).textContent = name;
+  document.getElementById(`js-${name}-description`).textContent = description;
+  document.getElementById(`js-${name}-date-added`).textContent ='Date Added: ' + dateAdded;
+  document.getElementById(`js-${name}-date-due`).textContent = 'Date Due: ' + dueDate;
+}
+
+function updateTask(task){
+  let index = findIndex(currentlySelected);
+  fullArray[index].Tasks.push(task);
+  localStorage.setItem('fullArray', JSON.stringify(fullArray));
+}
+
 
 function addColor(color){
 
@@ -203,6 +270,7 @@ displayer.appendChild(newCategory);
 
  newCategory.addEventListener('click',()=>{
   currentlySelected = document.getElementById( `js-${category}-catName`).textContent;
+  document.getElementById('js-catTasks-name').textContent = currentlySelected + ' Tasks';
   console.log(currentlySelected);
   displayTasks(category);
  });
@@ -227,7 +295,15 @@ function displayCategory(){
   }
 }
 function displayTasks(category){
+  let index = findIndex(currentlySelected);
 
+  for(let i = 0; i < fullArray[index].Tasks.length; i++){
+    const name = fullArray[index].Tasks[i].Name;
+    const description = fullArray[index].Tasks[i].Description;
+    const dueDate = fullArray[index].Tasks[i].DueDate;
+    const dateAdded = fullArray[index].Tasks[i].taskDateCreated;
+    addOntoTask(name, description, dueDate, dateAdded);
+  }
 }
 
 let updateCategory = (category)=>{
@@ -325,12 +401,20 @@ addCatButton = document.querySelector('[data-CatAddButton]');
 console.log(addCatButton + 'LOL');
 
 window.addEventListener("DOMContentLoaded",()=>{
-  displayCategory();
-
   
+  if(fullArray.length !== 0){
+    displayCategory();
+    currentlySelected = fullArray[0].catName;
+    displayTasks();
+  
+  }
+  document.getElementById('js-catTasks-name').textContent = currentlySelected + ' Tasks';
+
   deleteCatManager = document.getElementById('js-deleteCatManager');
   cancelCatDelete = document.querySelector('[data-cancelDelCat]');
   deleteCatButton = document.getElementById('js-cat-deletor');
+
+  addTaskButton = document.querySelector('.add-task-button');
 
   catModal = document.getElementById('js-catModal');
   taskModal = document.getElementById('js-taskModal');
@@ -343,7 +427,7 @@ window.addEventListener("DOMContentLoaded",()=>{
   const overlay = document.getElementById('screen-overlay');
   const cancelCatOverlay = document.getElementById('js-no-add-cat');
   const cancelTaskOverlay = document.getElementById('js-no-add-task');
-
+//These are for the modal buttons
   
   
   deleteCatButton.addEventListener('click',()=>{
@@ -498,3 +582,30 @@ document.querySelector('.js-sidebar').innerHTML=`
         Manage
     </button>
   </div>*/
+
+  /*<div class="task">
+         
+
+          
+          <div class="task-name">
+          <p> Dry Dishes </p>
+          <div class="checkbox-container">
+
+            <input type="checkbox" class="task-checkbox">
+            <p style="margin-left:0px !important"> Completed? </p>
+            
+            
+        </div>
+      </div>
+      <p style="margin: 0px 0px 5px 20px; "> Description: </p>
+
+        <div class="task-description">
+          <p>- Nour must wash the dishes asap so that he doesn't get bullied by mom SO HE SHOULD CLEAN DEM DISHES.</p>
+        </div>
+        
+        <div class="task-date">
+          <p id="js-task-added"> Date Added: 9/21/2023</p>
+          <p id="js-task-due"> Date Due: 9/21/2023</p>
+
+        </div>
+      </div>*/
